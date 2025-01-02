@@ -16,6 +16,9 @@ const server = http.createServer((req, res) => {
         res.end('<h1>Post page!!</h1>')
     } else if (path === '/user') {
         res.writeHead(404, {'Content-Type': 'text/html'});
+        res.end('<h1>User page!!</h1>')
+    } else {
+        res.writeHead(404, {'Content-Type': 'text/html'});
         res.end('<h1>404 page not found</h1>')
     }
 });
